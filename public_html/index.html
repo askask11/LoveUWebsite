@@ -1,0 +1,227 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>>.<</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--<link rel="preload" href="models/pio/textures/school-costume.png" > 
+        <link rel="preload" href="models/pio/textures/default-costume.png" > 
+        <link rel="preload" href="models/pio/textures/pajamas-costume.png" >-->
+        <script>
+            (new Image()).src = "models/pio/textures/school-costume.png";
+            (new Image()).src = "models/pio/textures/default-costume.png";
+            (new Image()).src = "models/pio/textures/pajamas-costume.png";
+            (new Image()).src = "img/calanghei.jpg";
+            (new Image()).src = "img/wp.webp";
+            
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", "models/pio/model.moc", true); // false for synchronous request
+            xmlHttp.send(null);
+        </script>
+
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Overlock&display=swap">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        
+
+        <style>
+
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+                font-family: 'Overlock', cursive !important;
+                background-size: 100%;
+                background-attachment: fixed;
+                background-color: pink;
+
+            }
+
+            h1, h4
+            {
+                font-family: 'Cabin Sketch', cursive;
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--Waifu kit css-->
+        <link href='static/pio.css' rel='stylesheet' type='text/css'/>
+        <!-- Live2D for waifu -->
+        <script src='static/l2d.js' ></script>
+        <!-- Waifu interactive js -->
+        <script src='static/pio.js' ></script>
+
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    </head>
+    <body onload="init();" id='body'>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <center id='loader'>
+
+        <div class='loader' >
+
+        </div><br>
+        <strong>We are preparing for your interactive application, please wait...</strong>
+        <br>If this is the first time you use this application, it might be slower than usual.
+        <br>The plugin on the website may show up later than the page, depending on your network.
+        <br>Please make sure you enabled cache.
+    </center>
+
+
+    <div id="wrapper" style="display:none;">
+        <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #ff99ff !important; ">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" >&#128149; Love You! </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class='navbar-form navbar-right'>
+                        <div class="form-group">
+                            <input type="text" placeholder="Email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-control" id="password" onmouseover="notify(['enter yr password']);">
+                        </div>
+                        <script>
+                            function signin()
+                            {
+
+                                var email = document.getElementById('email').value;
+                                var password = document.getElementById('password').value;
+
+                                //check user email
+                                if (email !== "seung_lee@s.thevillageschool.com")
+                                {
+                                    //someone else sign in
+                                    alert("Are you Seung-gu Lee? Sign in with your school email! Ha!");
+                                } else
+                                {
+                                    //send the password to the god
+                                    password = "";
+
+
+                                    //my love sign in
+                                    alert('OMG LEE YOU ARE HERE!!!!!!! No matter what password you put! I have waited you for a long time! Let\'s go! (wait 3 sec)');
+                                    var x = setInterval(function () {
+                                        window.location = "https://youtu.be/HGt1nreDUEE";
+                                        clearInterval(x);
+                                    }, 3000);
+                                }
+                            }
+                        </script>
+                        <button type="button" class="btn btn-success" onclick="signin();" onmouseover="notify('let\'s go!')">Sign in</button>
+                    </div>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </nav>
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron" style="background-color: rgba(255, 204, 204, 0.6); ">
+            <div class="container" >
+                <h1>LOVE YOU WEBSITE</h1>
+                <p>You are amazing! I am your fans! I love you!</p>
+                <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+                <button class="btn btn-danger" onclick='alert("You will go through shock and regret!");window.location = "https://youtu.be/zbSMCyJkUmI";' id='nolikebtn'>
+                    I don't like you.
+                </button>
+                <script>
+                    function likeu()
+                    {
+                        document.getElementById("mq").style.setProperty("visibility", "visible");
+                        var clip = document.getElementById('loveyouclip');
+                        clip.play();
+                    }
+
+                </script>
+
+                <button class='btn btn-success' onmouseover="notify('오빠, 사랑해~ ❤︎');" onclick='likeu();'>
+                    I like you
+                </button>
+
+                <marquee style="visibility: hidden;" id="mq">
+                    <h1>&#128525;ME TOO!&#128525;</h1>
+                </marquee>
+
+
+                <!--사랑해 clip-->
+                <audio id="loveyouclip" src="audio/7830.mp3">
+
+                </audio>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <!--  row of columns -->
+
+            <center>
+                <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/V5PLNMn3Wfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                --><img src="img/calanghei.jpg" width="431" alt="love u">
+            </center>
+        </div>
+
+        <div class="pio-container right ">
+            <div class="pio-action"></div>
+            <canvas id="pio" width="250" height="250"></canvas>
+        </div>
+
+        <button onclick='CLIP.pause();
+                    clearInterval(ms);
+                '
+                onmouseover="notify('You may stop the background music from playing.')">
+            stop background
+        </button>
+        <hr>
+
+        <footer>
+            <p>&copy; Love Ya 2020
+                The Robot is a bit slow, please wait patiently while it's loading!
+            </p>
+        </footer>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics script insertion -->
+    <script>
+                    (function (b, o, i, l, e, r) {
+                        b.GoogleAnalyticsObject = l;
+                        b[l] || (b[l] =
+                                function () {
+                                    (b[l].q = b[l].q || []).push(arguments)
+                                });
+                        b[l].l = +new Date;
+                        e = o.createElement(i);
+                        r = o.getElementsByTagName(i)[0];
+                        e.src = '//www.google-analytics.com/analytics.js';
+                        r.parentNode.insertBefore(e, r)
+                    }(window, document, 'script', 'ga'));
+                    ga('create', 'UA-161650250-1', 'auto');
+                    ga('send', 'pageview');
+    </script>
+
+</body>
+</html>
